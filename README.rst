@@ -34,23 +34,7 @@ The files and folders of the project are listed below::
     │   .gitignore
     │   README.rst
     │
-    ├───.idea
-    │   │   .gitignore
-    │   │   ACC-Identification.iml
-    │   │   misc.xml
-    │   │   modules.xml
-    │   │   vcs.xml
-    │   │   workspace.xml
-    │   │
-    │   ├───inspectionProfiles
-    │   │       profiles_settings.xml
-    │   │       Project_Default.xml
-    │   │
-    │   └───sonarlint
-    │       └───issuestore
-    │               index.pb
-    │
-    ├───data
+    ├───data  <- Third party data
     │       AstaZero_data_processed.csv
     │       AstaZero_data_processed_Li_et_al.csv
     │       Bjtu_data_processed.csv
@@ -59,18 +43,16 @@ The files and folders of the project are listed below::
     └───src
         │   predict_biLSTM.py
         │
-        ├───data
-        │   │   Li_et_al_processed_data.py
-        │   │   processed_data.py
-        │   │
-        │   └───__pycache__
-        │           processed_data.cpython-310.pyc
+        ├───data  <- Contains the scripts to generate data
+        │       Li_et_al_processed_data.py
+        │       processed_data.py
         │
-        ├───final_models
+        │
+        ├───final_models <- Models used to write the paper
         │       biLSTM_5s.h5
         │       scaler_biLSTM_5s.pkl
         │
-        └───models
+        └───models <- Models architectures
                 biLSTM.py
                 Li_et_al_LSTM.py
                 logistic_regression.py
