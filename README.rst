@@ -21,6 +21,63 @@ ACC-Identification
 
 .. _end-info:
 
+.. contents:: Table of Contents
+  :backlinks: top
+
+.. _start-structure:
+
+Project files and folders
+-------------------------
+The files and folders of the project are listed below::
+
+    ACC-identification
+    │   .gitignore
+    │   README.rst
+    │
+    ├───.idea
+    │   │   .gitignore
+    │   │   ACC-Identification.iml
+    │   │   misc.xml
+    │   │   modules.xml
+    │   │   vcs.xml
+    │   │   workspace.xml
+    │   │
+    │   ├───inspectionProfiles
+    │   │       profiles_settings.xml
+    │   │       Project_Default.xml
+    │   │
+    │   └───sonarlint
+    │       └───issuestore
+    │               index.pb
+    │
+    ├───data
+    │       AstaZero_data_processed.csv
+    │       AstaZero_data_processed_Li_et_al.csv
+    │       Bjtu_data_processed.csv
+    │       Bjtu_data_processed_Li_et_al.csv
+    │
+    └───src
+        │   predict_biLSTM.py
+        │
+        ├───data
+        │   │   Li_et_al_processed_data.py
+        │   │   processed_data.py
+        │   │
+        │   └───__pycache__
+        │           processed_data.cpython-310.pyc
+        │
+        ├───final_models
+        │       biLSTM_5s.h5
+        │       scaler_biLSTM_5s.pkl
+        │
+        └───models
+                biLSTM.py
+                Li_et_al_LSTM.py
+                logistic_regression.py
+                SVM_linear.py
+
+
+.. _end-structure:
 
 .. _start-sub:
 
