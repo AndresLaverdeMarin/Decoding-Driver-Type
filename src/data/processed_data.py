@@ -3,8 +3,6 @@ import pickle as pkl
 import pandas as pd
 import numpy as np
 
-from sklearn.model_selection import train_test_split
-
 
 def _read_scaler(path):
     """
@@ -41,15 +39,10 @@ def _create_trip_windows(windows_size: int, list_dfs: list) -> list:
     final_list = []
     for df in list_dfs:
         size = windows_size + 1
-        half_size = int(windows_size / 2)
         list_of_dfs = [df.iloc[i : i + size - 1, :] for i in range(0, len(df), size)]
         for trip in list_of_dfs:
             if len(trip) == windows_size:
                 final_list.extend([trip])
-            # else:
-            #     for i in range(trip.index[-1], trip.index[-1] + (windows_size - len(trip) + 1)):
-            #         trip.loc[i, trip.columns] = [9999] * len(trip.columns)
-            #     final_list.extend([trip])
 
     return final_list
 
@@ -111,7 +104,6 @@ def read(path, scaler_path, window_size):
     # 10 Hz data
     input_trips = _create_trip_windows(windows_size=window_size * 10, list_dfs=list_df)
     for trip in input_trips:
-        # X.append(trip[["SpeedF", "SpeedL", "Acceleration", "Spacing"]].values)
         X.append(
             trip[
                 [
