@@ -14,7 +14,7 @@ ACC-Identification
 
               Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, WITHOUT WARRANTIES OR CONDITIONS
               OF ANY KIND, either express or implied. See the Licence for the specific language governing permissions and limitations under the Licence.
-:Datasets: AstaZero OpenACC (link: https://doi.org/10.1016/j.trc.2021.103047)
+:Datasets: AstaZero `OpenACC <https://www.sciencedirect.com/science/article/pii/S0968090X21000772>`__ (link: https://doi.org/10.1016/j.trc.2021.103047)
 
     BJTU dataset (link: https://doi.org/10.1016/j.trb.2015.08.003)
 
