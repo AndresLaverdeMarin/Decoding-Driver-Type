@@ -105,7 +105,8 @@ The files and folders of the project are listed below::
 .. _start-references:
 References
 ==========
-.. bibliography::
+Dataset references::
+
     @article{makridis_openacc_2021,
         title = {{OpenACC}. {An} open database of car-following experiments to study the properties of commercial {ACC} systems},
         volume = {125},
