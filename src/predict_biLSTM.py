@@ -18,4 +18,8 @@ X, y = read(
 
 model = keras.models.load_model(prj_dir.joinpath("src").joinpath("final_models").joinpath("biLSTM_5s.h5"))
 
+# Prediction
 model.evaluate(X, y, verbose=1)
+
+# Prediction
+model.predict(X)
