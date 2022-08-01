@@ -24,17 +24,51 @@ ACC-Identification
 .. contents:: Table of Contents
   :backlinks: top
 
+.. _start-introduction:
+Introduction
+============
+This project contains all the code used and described in (to be updated with the link).
+
+.. _end-introduction:
+
+.. _start-install:
+Installation
+============
+Prerequisites
+-------------
+**Python-3.10+** is required.
+It requires **numpy/scipy** and **pandas** libraries with native backends.
+
+.. Tip::
+    On *Windows*, it is preferable to use the `Anaconda <https://www.anaconda.com/products/individual>`__ distribution.
+    To avoid possible incompatibilities with other projects
+
+To run the deep learning models using GPU `cuDNN 8.1 <https://developer.nvidia.com/cudnn>`__ nvidia API is required.
+
+.. Tip::
+    If you use a different tensorflow-gpu version check `TensorFlow 2  <https://www.tensorflow.org/install/source_windows#gpu>`__
+    to install correct versions of the compilers and drivers.
+
+Download
+--------
+Download the sources,
+
+- either with *git*, by giving this command to the terminal::
+
+      git clone https://github.com/AndresLaverdeMarin/ACC-Identification.git --depth=1
+.. _end-install:
+
 .. _start-structure:
 
 Project files and folders
--------------------------
+=========================
 The files and folders of the project are listed below::
 
     ACC-identification
     │   .gitignore
     │   README.rst
     │
-    ├───data  <- Third party data
+    ├───data <- Third party data
     │       AstaZero_data_processed.csv
     │       AstaZero_data_processed_Li_et_al.csv
     │       Bjtu_data_processed.csv
@@ -42,22 +76,29 @@ The files and folders of the project are listed below::
     │
     └───src
         │   predict_biLSTM.py
+        │   predict_Li_et_al_LSTM.py
+        │   predict_logistic_regression.py
+        │   predict_SVM_linear.py
         │
-        ├───data  <- Contains the scripts to generate data
+        ├───data <- Contains the scripts to generate data.
         │       Li_et_al_processed_data.py
         │       processed_data.py
         │
-        │
-        ├───final_models <- Models used to write the paper
+        ├───final_models
         │       biLSTM_5s.h5
+        │       Li_et_al_LSTM_5s.h5
+        │       logistic_regression.pkl
         │       scaler_biLSTM_5s.pkl
+        │       scaler_Li_et_al_LSTM_5s.pkl
+        │       scaler_logistic_regression.pkl
+        │       scaler_SVM_linear.pkl
+        │       SVM_linear.pkl
         │
-        └───models <- Models architectures
+        └───models <- Models architecture.
                 biLSTM.py
                 Li_et_al_LSTM.py
                 logistic_regression.py
                 SVM_linear.py
-
 
 .. _end-structure:
 
