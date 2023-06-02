@@ -1,11 +1,11 @@
-ACC-Identification
-==================
+Decoding Driver Type
+====================
 .. _start-info:
 
 :versions:      |gh-version| |rel-date| |python-ver|
-:sources:       https://github.com/AndresLaverdeMarin/ACC-Identification |codestyle|
-:keywords:      ACC, Human driver, Deep Learning, Machine Learning
-:short name:    ACC-Identification
+:sources:       https://github.com/AndresLaverdeMarin/Decoding-Driver-Type |codestyle|
+:keywords:      Traffic engineering, Automated Vehicles, Driver identification, Driver behavior, Deep learning
+:short name:    Decoding Driver Type: Unveiling Autonomous Vehicles using Trajectory Data
 :Copyright and License:     © Copyright (c) 2021 European Union.
 
               Licensed under the EUPL, Version 1.2 or – as soon they will be approved by the European Commission – subsequent versions of the EUPL (the "Licence");
