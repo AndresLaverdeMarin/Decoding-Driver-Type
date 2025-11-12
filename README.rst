@@ -110,7 +110,9 @@ This section demonstrates how to use the biLSTM model for driver type prediction
 
 Basic Usage
 -----------
-To predict driver types using the pre-trained biLSTM model::
+To predict driver types using the pre-trained biLSTM model:
+
+.. code-block:: python
 
     from pathlib import Path
     from os.path import abspath, join, dirname
