@@ -4,18 +4,16 @@ Decoding Driver Type
 Video Abstract
 ==============
 
-.. raw:: html
+Watch the video abstract of this research:
 
-   <div align="center">
-     <video width="640" height="360" controls>
-       <source src="./video/Video_abstract.mp4" type="video/mp4">
-       Your browser does not support the video tag.
-     </video>
-   </div>
+`Click here to view the Video Abstract <https://github.com/AndresLaverdeMarin/Decoding-Driver-Type/raw/main/video/Video_abstract.mp4>`_
 
-|
+Alternatively, you can find the video in the ``video/`` folder of this repository.
 
 .. _start-info:
+
+Information Table
+=================
 
 :versions:      |gh-version| |rel-date| |python-ver|
 :sources:       https://github.com/AndresLaverdeMarin/Decoding-Driver-Type |codestyle|
