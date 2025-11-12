@@ -235,7 +235,7 @@ Dataset references::
     :target: https://github.com/JRCSTU/gearshift/releases
     :alt: Latest version in GitHub
 
-.. |rel-date| image:: https://img.shields.io/badge/rel--date-31--07--2021-orange
+.. |rel-date| image:: https://img.shields.io/badge/rel--date-12--11--2025-orange
     :target: https://github.com/JRCSTU/gearshift/releases
     :alt: release date
 
