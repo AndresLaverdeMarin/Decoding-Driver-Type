@@ -39,13 +39,14 @@ def _create_trip_windows(windows_size: int, list_dfs: list) -> list:
     final_list = []
     for df in list_dfs:
         size = windows_size + 1
-        list_of_dfs = [df.iloc[i - 1: i + size - 2, :] for i in range(1, len(df) + 1, size-1)]
+        list_of_dfs = [
+            df.iloc[i - 1 : i + size - 2, :] for i in range(1, len(df) + 1, size - 1)
+        ]
         for trip in list_of_dfs:
             if len(trip) == windows_size:
                 final_list.extend([trip])
 
     return final_list
-
 
 
 def read(path, scaler_path, window_size):
