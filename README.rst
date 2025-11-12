@@ -1,5 +1,20 @@
 Decoding Driver Type
 ====================
+
+Video Abstract
+==============
+
+.. raw:: html
+
+   <div align="center">
+     <video width="640" height="360" controls>
+       <source src="./video/Video_abstract.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+     </video>
+   </div>
+
+|
+
 .. _start-info:
 
 :versions:      |gh-version| |rel-date| |python-ver|
@@ -64,41 +79,66 @@ Project files and folders
 =========================
 The files and folders of the project are listed below::
 
-    ACC-identification
-    │   .gitignore
-    │   README.rst
+    Decoding-Driver-Type
     │
-    ├───data <- Third party data
-    │       AstaZero_data_processed.csv
-    │       AstaZero_data_processed_Li_et_al.csv
-    │       Bjtu_data_processed.csv
-    │       Bjtu_data_processed_Li_et_al.csv
+    │   README.rst                  # Project documentation and usage guide
+    │   requirements.txt            # Python dependencies and package versions
+    │   main.py                     # Main execution script for model training and evaluation
+    │   .gitignore                  # Git ignore patterns
     │
-    └───src
-        │   predict_biLSTM.py
-        │   predict_Li_et_al_LSTM.py
-        │   predict_logistic_regression.py
-        │   predict_SVM_linear.py
+    ├───data                        # Processed datasets and analysis results
+    │   │   AstaZero_data_processed.csv              # AstaZero dataset with proposed features
+    │   │   AstaZero_data_processed_Li_et_al.csv     # AstaZero dataset with Li et al. features
+    │   │   Bjtu_data_processed.csv                  # BJTU dataset with proposed features
+    │   │   Bjtu_data_processed_Li_et_al.csv         # BJTU dataset with Li et al. features
+    │   │
+    │   └───ACC_data_analysis_results                # Statistical analysis outputs
+    │           MMD_test_Scenario_A.png              # Maximum Mean Discrepancy test visualization
+    │           MMD_test_Scenario_B.png              # Maximum Mean Discrepancy test visualization
+    │           permutation_test_logs_scenario_A.pkl # Permutation test results for concept drift
+    │           permutation_test_logs_scenario_B.pkl # Permutation test results for concept drift
+    │
+    ├───src                         # Source code for models and data processing
+    │   │   predict_biLSTM.py                # Prediction script using biLSTM model
+    │   │   predict_Li_et_al_LSTM.py         # Prediction script using Li et al. LSTM model
+    │   │   predict_logistic_regression.py   # Prediction script using logistic regression
+    │   │   predict_SVM_linear.py            # Prediction script using linear SVM
+    │   │
+    │   ├───data                    # Data preprocessing and feature extraction scripts
+    │   │       Li_et_al_processed_data.py   # Data processing following Li et al. methodology
+    │   │       processed_data.py            # Data processing for proposed feature set
+    │   │
+    │   ├───final_models            # Pre-trained models and fitted scalers
+    │   │       biLSTM_5s.h5                       # Trained bidirectional LSTM model (5-second window)
+    │   │       biLSTM.hdf5                        # Alternative biLSTM checkpoint
+    │   │       Li_et_al_LSTM_5s.h5                # Trained Li et al. LSTM model (5-second window)
+    │   │       logistic_regression.pkl            # Trained logistic regression classifier
+    │   │       SVM_linear.pkl                     # Trained linear SVM classifier
+    │   │       scaler_biLSTM_5s.pkl               # Feature scaler for biLSTM model
+    │   │       scaler_Li_et_al_LSTM_5s.pkl        # Feature scaler for Li et al. LSTM
+    │   │       scaler_logistic_regression.pkl     # Feature scaler for logistic regression
+    │   │       scaler_SVM_linear.pkl              # Feature scaler for linear SVM
+    │   │
+    │   ├───models                  # Model architecture definitions
+    │   │       biLSTM.py            # Bidirectional LSTM architecture implementation
+    │   │       Li_et_al_LSTM.py     # Li et al. LSTM architecture implementation
+    │   │       logistic_regression.py # Logistic regression with bagging ensemble
+    │   │       SVM_linear.py        # Linear SVM with bagging ensemble
+    │   │
+    │   └───statistical_analysis    # Statistical testing and concept drift analysis
+    │           statistical_test.ipynb         # ANOVA and Tukey HSD tests for model comparison
+    │           concept_drift_analysis.ipynb   # Concept drift detection using MMD
+    │
+    ├───plots                       # Visualization and plotting utilities
+    │       plots.ipynb             # Jupyter notebook for generating publication-ready figures
+    │
+    └───video                       # Animation and visualization for presentations
+        │   scene_1.py              # Manim script for Hilbert-Huang Transform visualization
+        │   Video_abstract.mp4      # Video abstract of the research
         │
-        ├───data <- Contains the scripts to generate data.
-        │       Li_et_al_processed_data.py
-        │       processed_data.py
-        │
-        ├───final_models
-        │       biLSTM_5s.h5
-        │       Li_et_al_LSTM_5s.h5
-        │       logistic_regression.pkl
-        │       scaler_biLSTM_5s.pkl
-        │       scaler_Li_et_al_LSTM_5s.pkl
-        │       scaler_logistic_regression.pkl
-        │       scaler_SVM_linear.pkl
-        │       SVM_linear.pkl
-        │
-        └───models <- Models architecture.
-                biLSTM.py
-                Li_et_al_LSTM.py
-                logistic_regression.py
-                SVM_linear.py
+        └───data                    # Data files for video generation
+                data2plotACC.csv    # Preprocessed ACC data for visualization
+                data2plotHV.csv     # Preprocessed human vehicle data for visualization
 
 .. _end-structure:
 
