@@ -27,7 +27,7 @@ Decoding Driver Type
 .. _start-introduction:
 Introduction
 ============
-This project contains all the code used and described in (to be updated with the link).
+This project contains all the code used and described in Human or Machine: A novel deep learning framework for autonomous driver identification based on vehicle trajectories.
 
 .. _end-introduction:
 
@@ -101,6 +101,46 @@ The files and folders of the project are listed below::
                 SVM_linear.py
 
 .. _end-structure:
+
+.. _start-usage:
+
+Usage Example
+=============
+This section demonstrates how to use the biLSTM model for driver type prediction based on the ``src/predict_biLSTM.py`` file.
+
+Basic Usage
+-----------
+To predict driver types using the pre-trained biLSTM model::
+
+    from pathlib import Path
+    from os.path import abspath, join, dirname
+    from tensorflow import keras
+    from data.processed_data import read
+
+    # Get the project path
+    prj_dir = Path(abspath(join(dirname(__file__), "..")))
+
+    # Load and preprocess data
+    X, y = read(
+        prj_dir.joinpath("data").joinpath("AstaZero_data_processed.csv"),
+        "./final_models/scaler_biLSTM_5s.pkl",
+        5,
+    )
+
+    # Load the pre-trained biLSTM model
+    model = keras.models.load_model(
+        prj_dir.joinpath("src").joinpath("final_models").joinpath("biLSTM_5s.h5")
+    )
+
+    # Evaluate the model
+    model.evaluate(X, y, verbose=1)
+
+    # Make predictions
+    predictions = model.predict(X)
+
+The ``read`` function loads trajectory data and applies the saved scaler transformation. The model uses a 5-second window (indicated by the ``5`` parameter) for sequence-based predictions to distinguish between human and autonomous drivers.
+
+.. _end-usage:
 
 .. _start-references:
 References
