@@ -4,11 +4,14 @@ Decoding Driver Type
 Video Abstract
 ==============
 
-Watch the video abstract of this research:
+.. image:: video/Video_abstract.gif
+   :alt: Video Abstract - Decoding Driver Type
+   :align: center
+   :width: 100%
 
-`Click here to view the Video Abstract <https://github.com/AndresLaverdeMarin/Decoding-Driver-Type/raw/main/video/Video_abstract.mp4>`_
+|
 
-Alternatively, you can find the video in the ``video/`` folder of this repository.
+For higher quality, `click here to download the full video (MP4) <https://github.com/AndresLaverdeMarin/Decoding-Driver-Type/raw/main/video/Video_abstract.mp4>`_
 
 .. _start-info:
 
